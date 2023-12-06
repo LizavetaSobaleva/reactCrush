@@ -1,0 +1,13 @@
+.mainButton {
+    margin-right: 4px;
+    padding: 4px 20px;
+    background-color: teal;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    font-size: large;
+    font-weight: 300;
+}
+.mainButton:hover {
+    background-color: rgb(0, 88, 88);
+}

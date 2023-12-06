@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(252, 252, 252);
+    font-family: 'Roboto', sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+}
+
+.optionsPanel {
+    width: auto;
+    min-width: 200px;
+    height: auto;
+    margin: 12px;
+    padding: 20px 14px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 3px 11px 1px rgb(0, 0, 0, 0.1);
+}
