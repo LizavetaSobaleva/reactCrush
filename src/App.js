@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import "./App.css";
-import PostList from "./components/PostList/PostList";
-import PostForm from "./components/PostForm/PostForm";
-import MySelect from "./components/UI/select/MySelect";
+import PostList from "./components/PostList";
+import PostForm from "./components/PostForm";
+import PostFilter from "./components/PostFilter";
+import MyModal from "./components/UI/modal/MyModal";
+import MainButton from "./components/UI/button/MainButton";
+import {usePosts} from "./hooks/usePosts";
 
 const fontLink = document.createElement("link");
 fontLink.href =
@@ -16,29 +19,34 @@ function App() {
     { id: 2, title: "React", body: "Blach blach" },
     { id: 3, title: "TypeScript", body: "blach blach blach" },
   ]);
+  const [filter, setFilter] = useState({ sort: "", query: "" });
+  const [modal, setModal] = useState(false);
+  const sortedAndSearchedPosts = usePosts(posts, filter.sort, filter.query)
 
   const createPost = (newPost) => {
     setPosts([...posts, newPost]);
+    setModal(false)
   };
 
+  //получаем пост из дочернего компонента
   const removePost = (post) => {
     setPosts(posts.filter((p) => p.id !== post.id));
   };
 
   return (
     <div className="App">
-      <PostForm create={createPost} title="Create post"/>
+      <MyModal visible={modal} setVisible={setModal}>
+        <PostForm create={createPost} title="Create post" />
+      </MyModal>
 
-      <div className="optionsPanel">
-        {/* <MySelect
-          defaultValue="Sort by"
-        /> */}
-      </div>
+      <PostFilter filter={filter} setFilter={setFilter} />
 
-      {posts.length !== 0  
-        ? <PostList remove={removePost} posts={posts} title="Posts" />
-        : <h2 style={{textAlign: 'center', fontWeight: 'lighter'}}> No posts yet</h2>
-      }
+      <PostList remove={removePost} posts={sortedAndSearchedPosts} title="Posts" />
+
+      <MainButton style={{position: 'fixed', right: 30, bottom: 30, borderRadius: '50%', height: '4rem', width: '4rem'}} onClick={() => setModal(true)}>
+        <span style={{fontSize: '2.5rem', fontWeight: "300" }}>+</span>
+      </MainButton>
+
     </div>
   );
 }
