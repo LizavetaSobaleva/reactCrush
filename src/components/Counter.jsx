@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import MainButton from "./UI/button/MainButton";
+import MyBlock from "./UI/block/MyBlock";
 
 
 export default function Counter() {
@@ -13,12 +14,12 @@ export default function Counter() {
   }
 
   return (
-    <div className="counter">
+    <MyBlock>
       <h1 className="result">{count}</h1>
       <div className="buttons">
       <MainButton onClick={increment}>Increment</MainButton>
       <MainButton onClick={decrement}>Dectement</MainButton>
       </div>
-    </div>
+    </MyBlock>
   );
 }

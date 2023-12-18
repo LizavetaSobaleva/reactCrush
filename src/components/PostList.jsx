@@ -6,8 +6,8 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 const PostList = ({ title, posts, remove }) => {
   if (!posts.length) {
     return (
-      <h2 style={{ textAlign: "center", fontWeight: "lighter" }}>
-        No founded posts
+      <h2 style={{ textAlign: "center", fontWeight: "lighter", marginTop: "2rem" }}>
+        No posts found
       </h2>
     );
   }

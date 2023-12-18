@@ -16,3 +16,7 @@
     background-color: rgb(253, 253, 253);
     border: 1px solid rgba(218, 221, 222, 0.9);
 }
+
+strong {
+    font-weight: 500;
+}

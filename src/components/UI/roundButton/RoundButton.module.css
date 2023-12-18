@@ -1,0 +1,20 @@
+.roundButton {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgba(208, 215, 213, 0.3);
+    color: rgb(104, 118, 118); 
+    margin: 0 4px;
+    cursor: pointer;
+}
+
+.roundButton:hover {
+    background-color: rgba(208, 215, 213, 0.6);
+}
+
+.current {
+    background-color: rgba(208, 215, 213, 0.6);
+    color: teal;
+    font-weight: 900;
+}
