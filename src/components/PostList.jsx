@@ -6,7 +6,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 const PostList = ({ title, posts, remove }) => {
   if (!posts.length) {
     return (
-      <h2 style={{ textAlign: "center", fontWeight: "lighter", marginTop: "2rem" }}>
+      <h2>
         No posts found
       </h2>
     );
@@ -14,7 +14,7 @@ const PostList = ({ title, posts, remove }) => {
 
   return (
     <MyBlock>
-      <h1 style={{ textAlign: "center", fontWeight: "300" }}>{title}</h1>
+      <h1>{title}</h1>
 
       <TransitionGroup style={{width: '100%'}}>
         {posts.map((post, index) => 
@@ -27,6 +27,7 @@ const PostList = ({ title, posts, remove }) => {
           </CSSTransition>
         )}
       </TransitionGroup>
+
     </MyBlock>
   );
 };

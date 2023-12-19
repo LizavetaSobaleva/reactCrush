@@ -12,6 +12,18 @@
   min-height: 100vh;
 }
 
+h1 {
+  text-align: center; 
+  font-weight: 300;
+  color: rgb(36, 42, 42);
+}
+
+h2 {
+  text-align: center;
+  font-weight: 300;
+   margin-top: 2rem;
+}
+
 .form {
   width: 400px;
   height: 160px;
@@ -19,6 +31,13 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .post-enter {
@@ -43,4 +62,41 @@
   justify-content: center;
   align-items: center;
   margin: 12px 0;
+}
+
+.pagination {
+  margin-top: auto;
+}
+
+.page {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(208, 215, 213, 0.3);
+  color: rgb(104, 118, 118); 
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.page:hover {
+  background-color: rgba(208, 215, 213, 0.6);
+}
+
+.current {
+  background-color: rgba(208, 215, 213, 0.6);
+  color: teal;
+  font-weight: 900;
+}
+
+.notFound {
+  margin-top: 12rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 18rem;
+  font-weight: 900;
+  color: rgb(252, 252, 252);
+  text-shadow: 4px 8px 24px rgb(0, 0, 0, 0.2), 0px 4px 16px rgb(0, 0, 0, 0.4);
 }
