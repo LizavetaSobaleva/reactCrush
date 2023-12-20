@@ -21,7 +21,12 @@ h1 {
 h2 {
   text-align: center;
   font-weight: 300;
-   margin-top: 2rem;
+  margin: 2rem 0;
+}
+
+h5 {
+  font-weight: 500;
+  color: rgb(145, 154, 151);
 }
 
 .form {
@@ -99,4 +104,5 @@ h2 {
   font-weight: 900;
   color: rgb(252, 252, 252);
   text-shadow: 4px 8px 24px rgb(0, 0, 0, 0.2), 0px 4px 16px rgb(0, 0, 0, 0.4);
+  user-select: none;
 }
