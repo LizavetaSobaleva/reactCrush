@@ -1,12 +1,12 @@
 .mainButton {
     max-width: 200px;
     margin-right: 4px;
-    padding: 4px 20px;
+    padding: 6px 20px;
     background-color: teal;
     border-radius: 6px;
     color: white;
     border: none;
-    font-size: large;
+    font-size: medium;
     font-weight: 300;
 }
 .mainButton:hover {

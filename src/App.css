@@ -106,3 +106,21 @@ h5 {
   text-shadow: 4px 8px 24px rgb(0, 0, 0, 0.2), 0px 4px 16px rgb(0, 0, 0, 0.4);
   user-select: none;
 }
+
+.login {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8rem;
+  background: linear-gradient(110.7deg, rgb(9, 154, 151) 6.3%, rgb(21, 205, 168) 90.6%);
+}
+
+.login form {
+  padding: 10% 20% ;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
